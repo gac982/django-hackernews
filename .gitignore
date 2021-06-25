@@ -1,0 +1,4 @@
+venv
+src/node_modules
+src/static
+db.sqlite3

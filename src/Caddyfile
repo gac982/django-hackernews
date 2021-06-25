@@ -1,0 +1,13 @@
+http://django.localhost:9000
+
+encode gzip zstd
+
+root * "/home/gustavo/Documentos/Desarrollo Front-End/Cursos/Master Arquitectura Web/3.Modulo - Desarrollo Backend/Python/django-hackernews/src/"
+
+@notStatic {
+  not path /static/* /media/*
+}
+
+reverse_proxy @notStatic 127.0.0.1:8000
+
+file_server

@@ -1,0 +1,33 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="{% static "hackernews/css/main.css" %}">
+	<title>Document</title>
+</head>
+<body>
+	<header>
+		<nav>
+			<ul>
+				<li>
+					<a href="{% url 'home' %}">List</a>
+				</li>
+				<li>
+					<a href="{% url 'add-news' %}">Add News</a>
+				</li>
+			</ul>
+		</nav>
+	</header>
+	<main id="app">
+		<h1>Djnews</h1>
+		{% block main %}{% endblock %}
+	</main>
+	<footer>
+		2021 &copy; Djnews
+	</footer>
+	<script src="{% static "hackernews/js/vue.js" %}"></script>
+	<script defer src="{% static "hackernews/js/main.js" %}"></script>
+</body>
+</html>

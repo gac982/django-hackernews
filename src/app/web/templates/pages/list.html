@@ -1,0 +1,14 @@
+{% extends 'layouts/base.html' %}
+
+{% block title %}Welcome{% endblock %}
+
+{% block main %}
+
+
+<article v-for="item in news">
+	<h2>[[ item.title ]] <span> - [[ item.votes ]]</span></h2>
+	<a :href="item.url" target="_blank">Ver Completo</a>
+	<button @click.prevent=votar(item.id)>Votar</button>
+</article>
+
+{% endblock %}

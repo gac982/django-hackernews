@@ -1,0 +1,14 @@
+{% extends 'layouts/base.html' %}
+
+{% block title %}Ingresar Nueva Noticia{% endblock %}
+
+{% block main %}
+
+	<form novalidate method="post">
+		{% csrf_token %}
+		{{ news_form.as_p }}
+		<input type="submit" value="Guardar">
+	</form>
+
+
+{% endblock %}
